@@ -1,5 +1,5 @@
 name = "Call me Sam."
-license = "Creative Commons Attribution 3.0 Unported"
+license = "Apache-2.0"
 licenselink = "https://github.com/victoriadrake/hugo-theme-sam/blob/master/LICENSE.txt"
 description = "Simple And Minimalist theme for Hugo."
 homepage = "https://github.com/victoriadrake/hugo-theme-sam"
