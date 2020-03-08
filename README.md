@@ -32,6 +32,25 @@ Focused on content and typography, the stylized index page is really just a list
 
 ## Quick start
 
+### Requirements
+
+- Extended version of [Hugo](https://gohugo.io/getting-started/installing/) (latest version recommended)
+
+Extended Hugo's [PostCSS](https://gohugo.io/hugo-pipes/postcss/) requires JavaScript packages to compile the styles for this theme. You can install them using `npm`:
+
+- [postcss-cli](https://github.com/postcss/postcss-cli):`npm install -g postcss-cli`
+- [autoprefixer](https://github.com/postcss/autoprefixer): `npm install -g autoprefixer`
+
+[Learn how to install and use npm here](https://www.npmjs.com/get-npm).
+
+Note: If you are using [Hugo as a snap app](https://snapcraft.io/hugo), the above two Node.js packages have to be [installed locally inside `exampleSite`](https://gohugo.io/hugo-pipes/postcss/).
+
+```sh
+cd exampleSite/
+npm install postcss-cli
+npm install autoprefixer
+```
+
 ### 1. Get the theme
 
 Run from the root of your Hugo site:
@@ -107,11 +126,10 @@ To create an image gallery, place all the files you want included in your [Page 
 ```sh
 content/
  └── gallery/
-     └── _index.md
-     └── images/
-         ├── file_1.jpg
-         ├── file_2.jpg
-         └── file_3.jpg
+      ├── _index.md
+      ├── file_1.jpg
+      ├── file_2.jpg
+      └── file_3.jpg
 ```
 
 To automatically generate a gallery from the images, set `type: "gallery"` in the front-matter of `_index.md`. You can also set other options for the gallery:
@@ -137,19 +155,17 @@ In order to create more than one gallery, create multiple Page Bundles with imag
 
 ```
 content/
- | └── gallery/
- |     └── _index.md
- |     └── images/
- |         ├── file_1.jpg
- |         ├── file_2.jpg
- |         └── file_3.jpg
+ ├── gallery/
+ |   ├── _index.md
+ |   ├── file_1.jpg
+ |   ├── file_2.jpg
+ |   └── file_3.jpg
  |
  └── portfolio/
-     └── _index.md
-     └── images/
-         ├── file_1.jpg
-         ├── file_2.jpg
-         └── file_3.jpg
+     ├── _index.md
+     ├── file_1.jpg
+     ├── file_2.jpg
+     └── file_3.jpg
 ```
 
 That's it! Sam's gallery layout template will automatically build the page from your images.
@@ -172,4 +188,4 @@ Open source themes like this one would not be possible without some amazing __[c
 
 Copyright (C) 2018-2020 Victoria Drake
 
-Licensed under [AGPL-3.0](https://github.com/mfg92/hugo-theme-sam/blob/master/LICENSE)
+Licensed under [Apache-.0](https://github.com/mfg92/hugo-theme-sam/blob/master/LICENSE)
