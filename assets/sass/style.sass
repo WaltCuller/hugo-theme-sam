@@ -57,13 +57,17 @@ a
         color: $links
 
 button
-    padding: 20px
+    padding: 6px
     border: 0px
     border-radius: 5px
+    font-weight: bold
     background: $white
     &:hover
         box-shadow: 5px 5px $black
-
+    &.selected
+        background: $black
+        color: $white
+    
 hr
     +skinny-hr
     opacity: 0.3
