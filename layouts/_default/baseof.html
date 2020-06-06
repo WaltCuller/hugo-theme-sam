@@ -15,7 +15,7 @@
     {{ block "main" . }}
     {{ block "section_title" . }}
     <header class="wrap flex-container">
-        <h1>{{ .Title }}</h1>
+        <h1>{{ .Title | markdownify }}</h1>
     </header>
     {{ end }}
     <main class="wrap">

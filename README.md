@@ -1,4 +1,4 @@
-# [Call me Sam: a theme for Hugo](https://hugo-sam.netlify.com/)
+# [Call me Sam: a theme for Hugo](https://victoria.dev/hugo-theme-sam/)
 
 ![Main page screenshot](https://github.com/mfg92/hugo-theme-sam/blob/master/images/screenshot.png)
 
@@ -20,6 +20,7 @@ Focused on content and typography, the stylized index page is really just a list
   - Syntax highlighting
   - Share-ready pages with [Open Graph](https://gohugo.io/templates/internal/#open-graph) and [Twitter](https://gohugo.io/templates/internal/#twitter-cards) metadata you can customize in `config.toml` and page front-matter
   - Effortless use of Hugo Pipes to generate CSS from Sass files
+  - Tested for compatibility with Hugo versions as far back as `0.49.2`
 
 ## Differences to vickylai's original version
 
@@ -36,7 +37,13 @@ Focused on content and typography, the stylized index page is really just a list
 
 - Extended version of [Hugo](https://gohugo.io/getting-started/installing/) (latest version recommended)
 
-Extended Hugo's [PostCSS](https://gohugo.io/hugo-pipes/postcss/) requires JavaScript packages to compile the styles for this theme. You can install them using `npm`:
+Extended Hugo's [PostCSS](https://gohugo.io/hugo-pipes/postcss/) requires JavaScript packages to compile the styles for this theme. If you're seeing an error like this:
+
+```text
+Error: Error building site: POSTCSS failed to transform "css/main.css"
+```
+
+You can install the required packages using `npm`:
 
 - [postcss-cli](https://github.com/postcss/postcss-cli):`npm install -g postcss-cli`
 - [autoprefixer](https://github.com/postcss/autoprefixer): `npm install -g autoprefixer`
@@ -153,7 +160,7 @@ clickablePhotos: true
 
 In order to create more than one gallery, create multiple Page Bundles with images and `type: "gallery"` defined in the `_index.md` front matter. For example:
 
-```
+```text
 content/
  ├── gallery/
  |   ├── _index.md
@@ -188,4 +195,4 @@ Open source themes like this one would not be possible without some amazing __[c
 
 Copyright (C) 2018-2020 Victoria Drake
 
-Licensed under [Apache-.0](https://github.com/mfg92/hugo-theme-sam/blob/master/LICENSE)
+Licensed under [Apache-2.0](https://github.com/mfg92/hugo-theme-sam/blob/master/LICENSE)
