@@ -16,6 +16,7 @@ Focused on content and typography, the stylized index page is really just a list
 - Customize
   - Custom navigation menu set via `config.toml`
   - Custom footer text
+  - Custom background video via `config.toml`
 - Developer-approved
   - Syntax highlighting
   - Share-ready pages with [Open Graph](https://gohugo.io/templates/internal/#open-graph) and [Twitter](https://gohugo.io/templates/internal/#twitter-cards) metadata you can customize in `config.toml` and page front-matter
@@ -145,6 +146,7 @@ To automatically generate a gallery from the images, set `type: "gallery"` in th
 - The page link with `url`
 - The `maxWidth` of the resized images
 - Whether you want the images to link to the full size files, with `clickablePhotos`
+- You can keep the orignal aspect ratio of the images in the grid with `keepAspectRatio`
 
 Here is an example of a gallery's `_index.md`:
 
@@ -155,6 +157,7 @@ type: "gallery"
 url: "/portrait-gallery"
 maxWidth: "800x"
 clickablePhotos: true
+keepAspectRatio: false
 ---
 ```
 
@@ -177,11 +180,35 @@ content/
 
 That's it! Sam's gallery layout template will automatically build the page from your images.
 
+## Custom video background
+
+To change the default home page background to a looping video, you need to set a list of video sources and optionally an overlay color (default: `rgba(0, 0, 0, 0.4)`).
+
+Here is an example configuration of `config.toml`:
+
+```toml
+[[params.videoBackgroud.sources]]
+    source  = "/background.mp4" # Your video file
+    type    = "video/mp4"
+    poster  = "/background.jpg" # The image to show when the video isn't playing
+
+[params.videoBackgroud]
+    overlay = "rgba(0, 0, 0, 0.4)" # optional
+
+```
+
+And here is a screenshot of what that might look like:
+
+![Video background main page screenshot](https://github.com/victoriadrake/hugo-theme-sam/blob/master/images/video_screenshot.png)
+
 ## Editing the theme
 
 This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/) to compile, autoprefix, and minify its CSS styles from the included Sass files.
 
 To make changes to the CSS, edit the Sass files located in `assets/sass/`, then build your site using extended Hugo, which you can obtain from [Hugo Releases](https://github.com/gohugoio/hugo/releases).
+
+If when building you do not see the changes you have done, make sure to build your website with the `--ignoreCache` flag, otherwise Hugo will
+attempt to use its own cached Sass files.
 
 You can run the built-in server to preview the site as you make changes to the Sass files!
 
