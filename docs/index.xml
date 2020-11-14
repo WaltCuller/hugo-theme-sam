@@ -6,11 +6,7 @@
     <description>Recent content on Call me Sam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Mar 2018 20:18:53 -0500</lastBuildDate>
-    
-	<atom:link href="https://victoria.dev/hugo-theme-sam/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 16 Mar 2018 20:18:53 -0500</lastBuildDate><atom:link href="https://victoria.dev/hugo-theme-sam/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Video post</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/video-post/</link>
@@ -60,7 +56,7 @@ console.log(&amp;#39;eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
       <guid>https://victoria.dev/hugo-theme-sam/about/</guid>
       <description>Hello, I&amp;rsquo;m Sam. I&amp;rsquo;m a theme for Hugo. I&amp;rsquo;m an extremely customizable, content-focused theme that lets you showcase your work your way. I&amp;rsquo;m open source on GitHub.
 I have slick minimalist templates for list pages (such as a list of blog posts) and single pages (a page to read one blog post). You can use tags on your content, and view content by tags.
-I also have a simple responsive gallery built with CSS grid.</description>
+I also have a simple responsive gallery feature.</description>
     </item>
     
     <item>
@@ -92,7 +88,7 @@ However little known the feelings or views of such a man may be on his first ent
 Stretch&amp;rsquo;d in the tents the Grecian leaders lie:
 The immortals slumber&amp;rsquo;d on their thrones above;
 All, but the ever-wakeful eyes of Jove.(76)
-To honour Thetis&amp;rsquo; son he bends his care,
+To honour Thetis&#39; son he bends his care,
 And plunge the Greeks in all the woes of war:
 Then bids an empty phantom rise to sight,
 And thus commands the vision of the night.
