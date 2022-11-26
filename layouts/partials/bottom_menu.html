@@ -11,22 +11,18 @@
     {{ end }}
 
     {{ if .Page.Site.Params.mainMenu }}
-        {{ range first 1 .Page.Site.Params.mainMenu }}
-            <a href="{{ .link | relURL }}">{{ .text }}</a>
+        {{ range $elem_index, $elem_val := .Page.Site.Params.mainMenu }}
+            {{ if ( gt $elem_index 0 ) }}
+                &#183;
+            {{ end }}
+            <a href="{{ .link | relURL }}">{{ replaceRE "\\.$" "" $elem_val.text }}</a>
         {{ end }}
-    
-    {{ if ( gt ( len .Page.Site.Params.mainMenu ) 1 ) }}
-        {{ range after 1 .Page.Site.Params.mainMenu }}
+        
+        {{ if .Page.Site.Params.homepage }}
             &#183; 
-            <a href="{{ .link | relURL }}">{{ .text }}</a>
+            <a href="{{ .Site.Home | relURL }}">
+                {{ .Page.Site.Params.homepage }}
+            </a>
         {{ end }}
     {{ end }}
-    
-    {{ if .Page.Site.Params.homepage }}
-        &#183; 
-        <a href="{{ .Site.Home | relURL }}">
-            {{ .Page.Site.Params.homepage }}
-        </a>
-    {{ end }}
-{{ end }}
 </p>
